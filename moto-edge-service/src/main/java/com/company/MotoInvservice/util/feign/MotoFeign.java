@@ -12,17 +12,17 @@ import java.util.List;
 public interface MotoFeign {
 
     @PostMapping
-    public Moto addMoto(@RequestBody Moto moto);
+    public Moto addMotocycle(@RequestBody Moto moto);
 
     @GetMapping
-    public List<Moto> getAllMoto();
+    public List<Moto> getAllMotocycle();
 
     @GetMapping({"/id"})
-    public Moto getMoto(@PathVariable int id);
+    public Moto getMotocycle(@PathVariable int id);
 
     @PutMapping
-    public void updateMoto(@RequestBody Moto moto);
+    public void updateMotocycle(@RequestBody Moto moto);
 
     @DeleteMapping
-    public void deleteMoto(@PathVariable int id);
+    public void deleteMotocycle(@PathVariable int id);
 }

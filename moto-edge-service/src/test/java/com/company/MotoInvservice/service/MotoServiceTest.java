@@ -167,7 +167,7 @@ public class MotoServiceTest {
 
         service.deleteMoto(1);
         ArgumentCaptor<Integer> intCaptor = ArgumentCaptor.forClass(Integer.class);
-        verify(mFeign, times(1)).deleteMoto(intCaptor.capture());
+        verify(mFeign, times(1)).deleteMotocycle(intCaptor.capture());
 
         assertEquals(1, intCaptor.getValue().intValue());
 
@@ -182,8 +182,8 @@ public class MotoServiceTest {
         List<Moto> motos = new ArrayList<>();
         motos.add(newMoto);
 
-        doReturn(newMoto).when(mFeign).getMoto(1);
-        doReturn(motos).when(mFeign).getAllMoto();
+        doReturn(newMoto).when(mFeign).getMotocycle(1);
+        doReturn(motos).when(mFeign).getAllMotocycle();
 
     }
 }
